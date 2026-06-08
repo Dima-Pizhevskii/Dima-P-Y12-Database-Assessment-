@@ -6,16 +6,16 @@
 //
 // Written by Mr Britton
 /*******************************************************/
-console.log("Running the game");
+console.log("test the game");
 
-
-// End game code
-function endGame(_player, _obstacle){
-    console.log("Game ended, you got "+score+" points.")
-    screenSelector = "end";
-    player.remove();
-    obstacles.removeAll();
-    // Put your database writes here:
+function test(){
+console.log("writing dummy data to firebase")
+firebase.database().ref('/users/' ).set({
+        favoriteGolfC: favoriteGolfC,
+        golfQuantity: golfQuantity,
+        name: name,
+    });
+        console.log(loggedIn)
 
 
 
@@ -26,7 +26,10 @@ function endGame(_player, _obstacle){
 
 
 
-
+export function test() {
+    console.log("Test function triggered!");
+    // Add your test code here
+}
 
 
 

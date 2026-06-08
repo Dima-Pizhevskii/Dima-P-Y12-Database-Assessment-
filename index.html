@@ -12,9 +12,9 @@
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
   <!-- firebase end ******************************************-->
-  <script type="module" src="fb_io.js"></script>
-  <script type="module" src="fb_config.js"></script>
-  <script type="module" src="golf2DMain.js"></script>
+  
+  
+  
 
   <meta name="description" content="12COMP P5.play">
   <meta name="keywords" content="12COMP, P5.play">
@@ -28,7 +28,13 @@
   <script type="module"src="https://p5play.org/v3/p5play.js"></script>
 
   <!-- Include all your firebase libraries and scripts here -->
-
+  <script type="module" src="fb_io.js"></script>
+  <script type="module" src="fb_config.js"></script>
+  <script type="module" src="golf2DMain.js"></script>
+  <script >function clearall(){
+    firebase.database().ref('/').remove()
+      console.log("cleared")
+}</script>
 </head>
 
 <!--***************************************************
@@ -37,8 +43,8 @@
 <body>
    
   
-  <button onclick="writeDummyData()">Login with Google</button>
-      <button onclick="fb_logout()">Log out with Google</button>
+  <button onclick="test()">test</button>
+
 </body>
 </html>
 <!--***************************************************

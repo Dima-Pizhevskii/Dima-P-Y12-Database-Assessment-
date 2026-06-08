@@ -73,6 +73,8 @@ window.fb_logout = fb_logout;
 
 
 export {myString};
+
+
 function writeDummyData(){
 console.log("writing dummy data to firebase")
 firebase.database().ref('/users/' + GLOBAL_user.uid).set({
