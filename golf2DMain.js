@@ -26,10 +26,7 @@ firebase.database().ref('/users/' ).set({
 
 
 
-export function test() {
-    console.log("Test function triggered!");
-    // Add your test code here
-}
+
 
 
 

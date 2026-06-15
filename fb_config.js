@@ -1,12 +1,12 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCYVv0uVzV8OfDs36G4Whw1irInHK9y1rI",
-  authDomain: "golf-game-by-dima.firebaseapp.com",
-  databaseURL: "https://golf-game-by-dima-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "golf-game-by-dima",
-  storageBucket: "golf-game-by-dima.firebasestorage.app",
-  messagingSenderId: "522102856582",
-  appId: "1:522102856582:web:396b62b349e56b5e646a07",
-  measurementId: "G-P6ENDMD5QC"
+  apiKey: "AIzaSyBTp6MArmUWR_ugA2QX75mdZKkueVzmBUU",
+  authDomain: "comp-2026-dima-p.firebaseapp.com",
+  databaseURL: "https://comp-2026-dima-p-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "comp-2026-dima-p",
+  storageBucket: "comp-2026-dima-p.firebasestorage.app",
+  messagingSenderId: "631357932478",
+  appId: "1:631357932478:web:34dde6177a95aaa5b92fef",
+  measurementId: "G-BSYZVJ6PXJ"
 };
 
   // Initialize Firebase
