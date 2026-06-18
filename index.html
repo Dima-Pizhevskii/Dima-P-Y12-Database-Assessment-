@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Golf 2D</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Game</title>
   <link rel="stylesheet" href="style.css" />
   
   <!-- firebase start ****************************************-->
@@ -13,12 +15,10 @@
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
   <!-- firebase end ******************************************-->
   
-  
-  
 
   <meta name="description" content="12COMP P5.play">
   <meta name="keywords" content="12COMP, P5.play">
-  <meta name="author" content="Mr Britton">
+  <meta name="author" content="Dima">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- P5.js & P5.play ***************************** -->
@@ -32,6 +32,7 @@
   <script src="fb_config.js"></script>
   <script  src="golf2DMain.js"></script>
   <script  src="GeoDash.js"></script>
+
   <script >function clearall(){
     firebase.database().ref('/').remove()
       console.log("cleared")
