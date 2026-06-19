@@ -15,8 +15,8 @@ firebase.database().ref('/users/' ).set({
         UID_2: 2,
         UID_3: 3,
     });
-        console.log(loggedIn)
-window.location.href = "/"
+        console.log("loggedIn")
+window.location.href = "/mini_golf_2d.html";
 
 
 }

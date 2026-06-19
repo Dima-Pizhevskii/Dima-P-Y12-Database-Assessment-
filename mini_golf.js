@@ -20,7 +20,7 @@
   };
 
   
-let gameState = "menu";
+let gameState = "select";
 
 let trackPoints = [];
 let res = 100;
@@ -85,21 +85,46 @@ function initLevel() {
 
 
 function draw() {
-  if (gameState === "menu") {
-    drawMenu();
+  if (gameState === "select") {
+    drawSelect();
+  } else if (gameState === "geodash") {
+    drawGeodash();
+  } else if (gameState === "minigolf") {
+    drawMinigolf();
   } else if (gameState === "play") {
     drawGame();
   } else if (gameState === "gameover") {
     drawGameOver();
   }
 }
-function drawMenu() {
+
+function drawSelect() {
+  background(34, 100, 34);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  noStroke();
+  textSize(48);
+  text("Select a Game", width / 2, height / 2 -100);
+  textSize(24);
+  text("Press 1 for Geodash, Press 2 for Mini Golf", width / 2, height / 2 -30);
+}
+function drawMinigolf() {
   background(34, 100, 34);
   textAlign(CENTER, CENTER);
   fill(255);
   noStroke();
   textSize(48);
   text("MINI GOLF", width / 2, height / 2 - 40);
+  textSize(24);
+  text("Click to Start", width / 2, height / 2 + 30);
+}
+function drawGeodash() {
+  background(34, 100, 34);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  noStroke();
+  textSize(48);
+  text("Geodash", width / 2, height / 2 - 40);
   textSize(24);
   text("Click to Start", width / 2, height / 2 + 30);
 }
@@ -206,15 +231,32 @@ function drawGame() {
 }
 
 // inputs/controls
+function keyPressed() {
+  if (gameState === "select") {
+    if (key === '1') {
+      gameState = "geodash";
+    } else if (key === '2') {
+      gameState = "minigolf";
+    }
+  }
+}
 function mousePressed() {
-  if (gameState === "menu") {
-    // start
-    gameState = "play";
+  if (gameState === "geodash") {
+    // do nothing
+  } else if (gameState === "geodashPlay") {
+    // do nothing
+  }
+}
+function mousePressed() {
+    if (gameState === "minigolf") {
+
+    // start game
+    gameState = "minigolfPlay";
     level = 1;
     totalScore = 0;
     initLevel();
 
-  } else if (gameState === "play") {
+  } else if (gameState === "minigolfPlay") {
     if (won) {
       // move to the next level
       level++;

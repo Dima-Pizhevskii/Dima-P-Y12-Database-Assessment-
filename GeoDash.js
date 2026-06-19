@@ -10,7 +10,7 @@ console.log("Running the game");
 
 
 // End game code
-function endGame(_player, _obstacle){
+function geodash_endGame(_player, _obstacle){
     console.log("Game ended, you got "+score+" points.")
     screenSelector = "end";
     player.remove();
