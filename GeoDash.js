@@ -10,7 +10,7 @@ console.log("Running the game");
 
 
 // End game code
-function geodash_endGame(_player, _obstacle){
+function endGame(_player, _obstacle){
     console.log("Game ended, you got "+score+" points.")
     screenSelector = "end";
     player.remove();
@@ -53,10 +53,10 @@ function geodash_endGame(_player, _obstacle){
 
 
 
-const SCREEN_WIDTH = 400;
-const SCREEN_HEIGHT = 200;
-const PLAYER_HEIGHT = 25;
-const PLAYER_WIDTH = 25;
+const SCREEN_WIDTH = 2000;
+const SCREEN_HEIGHT = 1000;
+const PLAYER_HEIGHT = 50;
+const PLAYER_WIDTH = 50;
 
 
 const OBSTACLE_HEIGHT = PLAYER_HEIGHT;

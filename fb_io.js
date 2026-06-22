@@ -1,3 +1,11 @@
+/**************************************************************
+ **************************************************************
+ **                                                          **
+ ** fb_io.js is where you will put common firebase functions **
+ ** used throughout your code.                               **
+ **                                                          **
+ **************************************************************
+ **************************************************************/
 console.log("Running fb_io.js")
 
 export var GLOBAL_user;
@@ -73,18 +81,3 @@ window.fb_logout = fb_logout;
 
 
 export {myString};
-
-
-function writeDummyData(){
-console.log("writing dummy data to firebase")
-firebase.database().ref('/users/' + GLOBAL_user.uid).set({
-        favoriteGolfC: favoriteGolfC,
-        golfQuantity: golfQuantity,
-        name: name,
-    });
-        console.log(loggedIn)
-        console.log(GLOBAL_user.uid)
-        console.log(GLOBAL_user.$uid)
-
-
-}

@@ -8,19 +8,9 @@
 
 /*******************************************************/
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCYVv0uVzV8OfDs36G4Whw1irInHK9y1rI",
-    authDomain: "golf-game-by-dima.firebaseapp.com",
-    databaseURL: "https://golf-game-by-dima-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "golf-game-by-dima",
-    storageBucket: "golf-game-by-dima.firebasestorage.app",
-    messagingSenderId: "522102856582",
-    appId: "1:522102856582:web:396b62b349e56b5e646a07",
-    measurementId: "G-P6ENDMD5QC"
-  };
 
   
-let gameState = "select";
+let gameState = "menu";
 
 let trackPoints = [];
 let res = 100;
@@ -85,46 +75,21 @@ function initLevel() {
 
 
 function draw() {
-  if (gameState === "select") {
-    drawSelect();
-  } else if (gameState === "geodash") {
-    drawGeodash();
-  } else if (gameState === "minigolf") {
-    drawMinigolf();
+  if (gameState === "menu") {
+    drawMenu();
   } else if (gameState === "play") {
     drawGame();
   } else if (gameState === "gameover") {
     drawGameOver();
   }
 }
-
-function drawSelect() {
-  background(34, 100, 34);
-  textAlign(CENTER, CENTER);
-  fill(255);
-  noStroke();
-  textSize(48);
-  text("Select a Game", width / 2, height / 2 -100);
-  textSize(24);
-  text("Press 1 for Geodash, Press 2 for Mini Golf", width / 2, height / 2 -30);
-}
-function drawMinigolf() {
+function drawMenu() {
   background(34, 100, 34);
   textAlign(CENTER, CENTER);
   fill(255);
   noStroke();
   textSize(48);
   text("MINI GOLF", width / 2, height / 2 - 40);
-  textSize(24);
-  text("Click to Start", width / 2, height / 2 + 30);
-}
-function drawGeodash() {
-  background(34, 100, 34);
-  textAlign(CENTER, CENTER);
-  fill(255);
-  noStroke();
-  textSize(48);
-  text("Geodash", width / 2, height / 2 - 40);
   textSize(24);
   text("Click to Start", width / 2, height / 2 + 30);
 }
@@ -231,32 +196,15 @@ function drawGame() {
 }
 
 // inputs/controls
-function keyPressed() {
-  if (gameState === "select") {
-    if (key === '1') {
-      gameState = "geodash";
-    } else if (key === '2') {
-      gameState = "minigolf";
-    }
-  }
-}
 function mousePressed() {
-  if (gameState === "geodash") {
-    // do nothing
-  } else if (gameState === "geodashPlay") {
-    // do nothing
-  }
-}
-function mousePressed() {
-    if (gameState === "minigolf") {
-
-    // start game
-    gameState = "minigolfPlay";
+  if (gameState === "menu") {
+    // start
+    gameState = "play";
     level = 1;
     totalScore = 0;
     initLevel();
 
-  } else if (gameState === "minigolfPlay") {
+  } else if (gameState === "play") {
     if (won) {
       // move to the next level
       level++;
