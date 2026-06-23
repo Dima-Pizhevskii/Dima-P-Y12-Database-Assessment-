@@ -46,7 +46,7 @@ element.innerText = "Please log in to submit the form.";
 
 element.innerText = "Form data: " + name + ", " + favoriteGolfC + ", " + golfQuantity;
         console.log("redirecting")
-window.location.href = "../select.html";
+window.location.href = "../select2.html";
     }
 
 }
