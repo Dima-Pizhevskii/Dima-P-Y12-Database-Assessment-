@@ -11,11 +11,10 @@ console.log("Running fb_io.js")
 export var GLOBAL_user;
 var authenticationListener;
 export var loggedIn = false;
-      let myString = loggedIn;
-
+      let loggedinString = loggedIn;
+console.log(loggedinString)
 function fb_authenticate(){
   authenticationListener = firebase.auth().onAuthStateChanged(fb_handleLogin);
-
 
 
 }
@@ -75,6 +74,7 @@ function fb_error(){
 
 window.fb_authenticate = fb_authenticate;
 window.fb_logout = fb_logout; 
+window.fb_popupLogin = fb_popupLogin; 
 
 
 

@@ -11,19 +11,20 @@
 
 
 
-console.log("Running Sal's Strawberries")
+console.log("running script")
 const HTML_OUTPUT = document.getElementById("databaseOutput");
 
 
-import { GLOBAL_user, loggedIn } from "./fb_io.js";
+import { GLOBAL_user, loggedIn } from "/fb_io.js";
 
 
 function writeForm(){
     // Get the form data
     const name = document.getElementById("name").value;
-    const favoriteGolfC = document.getElementById("favoriteGolfC").value;
-    const golfQuantity = document.getElementById("golfQuantity").value;
+    const age = document.getElementById("age").value;
+    const favouriteNumber = document.getElementById("favouriteNumber").value;
     if (loggedIn == false){
+    console.log(loggedIn)
 
                 let element = document.getElementById("statusMessage");
 
@@ -31,20 +32,20 @@ element.innerText = "Please log in to submit the form.";
         return;
 
     }else {
-    console.log ("Form data: " + name + ", " + favoriteGolfC + ", " + golfQuantity);
+    console.log ("Form data: " + name + ", " + favouriteNumber + ", " + favouriteNumber);
 
 
     firebase.database().ref('/users/' + GLOBAL_user.uid).set({
-        favoriteGolfC: favoriteGolfC,
-        golfQuantity: golfQuantity,
+        age: age,
+        favouriteNumber: favouriteNumber,
         name: name,
     });
-        console.log(loggedIn)
+        console.log(loggedInString)
         console.log(GLOBAL_user.uid)
         console.log(GLOBAL_user.$uid)
                 let element = document.getElementById("statusMessage");
 
-element.innerText = "Form data: " + name + ", " + favoriteGolfC + ", " + golfQuantity;
+element.innerText = "Form data: " + name + ", " + age + ", " + favouriteNumber;
         console.log("redirecting")
 window.location.href = "../select2.html";
     }

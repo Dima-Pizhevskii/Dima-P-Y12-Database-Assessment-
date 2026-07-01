@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golf Game</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   
   <!-- firebase start ****************************************-->
   <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
@@ -32,30 +35,35 @@
   BODY
 ****************************************************-->
 <body>
-   <div class="container">
-    <h1>Golf Ball Shop</h1>
-    <h2>(and other golfy products)</h2>
+  <div class="game-wrapper">
+    <h1 class="game-title">GOLF 2D</h1>
 
-    <button onclick="fb_authenticate()">Login with Google</button>
-      <button onclick="fb_logout()">Log out with Google</button>
+    <div class="login-box">
+        <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        
+        <div class="input-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="14" max="110">
+        </div>
 
-    <form id="golfForm" onsubmit="return validateForm()">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="favoriteGolfC">Age</label>
-      <input type="text" id="favoriteGolfC" name="favoriteGolfC" required />
-
-      <label for="golfQuantity">Credit Card:</label>
-      <input type="number" id="golfQuantity" name="golfQuantity" required />
-      <!-- add more fields here -->
-    </form>
-
-    <button onclick="writeForm()">Submit</button>
-
-    <p id="statusMessage"></p>
+  <div class="input-group">
+    <label>Favourite Number:</label>
+    <input type="number" id="favouriteNumber">
   </div>
-  
+        <button class="login-btn" onclick="fb_popupLogin()">
+            <span class="btn-main-text">LOGIN</span>
+            <span class="btn-sub-text">With Google</span>
+        </button>
+         
+
+  <button type="button" class="login-btn" onclick="writeForm()">
+    <span class="btn-main-text">Next</span>
+  </button>
+   <p id="statusMessage" style="color: #437626; font-weight: bold; text-align: center;"></p>
+</div>
 
 
 </body>
